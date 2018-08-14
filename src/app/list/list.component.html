@@ -1,0 +1,25 @@
+<!-- <div *ngFor="let course of courses | async">
+  <div class="card" style="width: 100%; margin-top: 10px">
+    <div class="card-body">
+      <h5 class="card-title">{{course.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">by {{course.author}}</h6>
+      <p class="card-text">{{course.description}}</p>
+      <a href="{{course.url}}" class="card-link">Go to course ...</a>
+    </div>
+  </div>
+</div> -->
+
+<div *ngFor="let course of courses | async">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{course.title}}</mat-card-title>
+      <mat-card-subtitle>{{course.author}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{course.description}}
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button href="{{course.url}}">Detail</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
